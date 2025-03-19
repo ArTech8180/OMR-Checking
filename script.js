@@ -172,7 +172,7 @@ function updateLeaderboard(score) {
 
 // Capture Photo
 function capturePhoto() {
-    let video = document.getElementById("camera");
+    let video = document.getElementById("videoElement");
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
 
