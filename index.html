@@ -49,7 +49,17 @@
 
             <!-- Camera Section -->
             <div class="video-container">
-                <video id="camera" autoplay></video>
+                <video id="videoElement" autoplay></video>
+                <script>
+                    navigator.mediaDevices.getUserMedia({ video: true })
+                    .then((stream) => {
+                    document.getElementById('videoElement').srcObject = stream;
+                    })
+                    .catch((error) => {
+                    console.error("Camera error:", error);
+                    });
+                </script>
+
             </div>
             <button onclick="capturePhoto()">Capture 📸</button>
 
